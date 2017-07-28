@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>chenjiejiji0.0.1csv接口测试工具</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+					word-wrap: break-word;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>接口测试报告</h1>
+<table width="100%">
+<tr>
+<td align="left">author:bob</td><td align="right">Email:<a>chenjiejiji@gmail.com</a></td>
+</tr>
+</table>
+<hr size="1">
+<h2>统计表</h2>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>接口执行总数</th><th>成功率</th>
+</tr>
+<tr valign="top" class="">
+<td align="center">15</td><td align="center">67%</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+<h2>详细信息</h2>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>接口用例名称</th><th>接口地址</th><th>发送方式</th><th>发送数据</th><th>是否通过</th><th>详情</th>
+</tr>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">登录1</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center">{'num': '3'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_1')"><img src="expand.png" alt="expand/collapse" id="page_details_1_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_1">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>登录1</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'num': '3'}</td><td align="center">1</td><td align="right-side">{"code": 200, "data": [{"status": 1, "img": "", "author": "小5", "title": "精选基金复盘", "publishTime": 1499136932000, "columnName": "", "intro": "6月传统资金紧张月，央行放了一些水缓解紧张情况，效果不错。让小泰帮您回顾下，精选基金在6月的市场中表现如何：", "source": "原创", "insertTime": 1499136973000, "id": "qqqqqqqqqqwwwwwwwwweee"}, {"status": 1, "columnName": "", "author": "小5", "publishTime": 1496888266000, "source": "原创", "intro": "5月的市场就是金牛座，涨的好的都跟钱相关：不是银行股就是保险股。让小泰帮您回顾下，精选基金在5月的市场中表现如何：", "insertTime": 1498204475000, "title": "精选基金复盘", "id": "abcdefghigklmnopq"}]}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">注册2</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center">post</td><td align="center">{'expReturn':'8'|'investTerm':'6'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_2')"><img src="expand.png" alt="expand/collapse" id="page_details_2_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_2">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>注册2</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'8'|'investTerm':'6'}</td><td align="center">1</td><td align="right-side">{"msg": "ok", "code": 200, "data": {"fixPrompt2": "小泰通过大数据计算从6669支基金中筛选出符合您投资预期、<span style="color: #FFA20A;">亏损概率较低</span>的前5支基金。<div>这些基金盈利概率高，市场好时收益更高，市场调整时能<span style="color: #FFA20A;">最大程度的保住本金。</span></div>", "fixPrompt1": "小泰通过大数据计算从6669支基金中选出最适合半年投资，且符合您投资预期的基金共5支，其中<span style="color: #FFA20A;">泰达宏利养老混合B</span>亏损概率最低。", "flexiblePrompt2": "<span style="color: #FFA20A;">风险小，</span>门槛低，短期见收益，<span style="color: #FFA20A;">早买早收益。</span>", "funds": [{"fundId": "000508", "drawdown24m": 0.57, "drawdown6m": 0.4, "return2year": 11.14, "name": "泰达宏利养老混合B", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.39, "return3month": 4.88, "return6month": 5.99, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.32, "groupId": 0, "drawdown12m": 0.57}, {"fundId": "000507", "drawdown24m": 0.64, "drawdown6m": 0.4, "return2year": 12.52, "name": "泰达宏利养老混合A", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.68, "return3month": 4.96, "return6month": 6.35, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.31, "groupId": 0, "drawdown12m": 0.64}, {"fundId": "001141", "drawdown24m": 1.28, "drawdown6m": 0.72, "return2year": 11.59, "name": "泰达创盈A", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.15, "return3month": 4.24, "return6month": 6.16, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.63, "groupId": 0, "drawdown12m": 1.28}, {"fundId": "001597", "drawdown24m": 1.7, "drawdown6m": 0.76, "name": "招商丰融A", "riskLevel": "中等风险", "type": "混合型", "return1year": 11.01, "return3month": 6.27, "return6month": 9.42, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.76, "groupId": 0, "drawdown12m": 1.7}, {"fundId": "001598", "drawdown24m": 1.64, "drawdown6m": 0.69, "name": "招商丰融C", "riskLevel": "中等风险", "type": "混合型", "return1year": 9.22, "return3month": 6.22, "return6month": 9.22, "succRate": 95.9, "hs300Yield": 7.62, "drawdown3m": 0.69, "groupId": 0, "drawdown12m": 1.64}], "flexiblePrompt1": "基金直接交给专业基金经理来操盘，<span style="color: #FFA20A;">稳定且更省心。</span>"}}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">洪3</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center">{'num': '3'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_3')"><img src="expand.png" alt="expand/collapse" id="page_details_3_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_3">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>洪3</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'num': '3'}</td><td align="center">1</td><td align="right-side">{"code": 200, "data": [{"status": 1, "img": "", "author": "小5", "title": "精选基金复盘", "publishTime": 1499136932000, "columnName": "", "intro": "6月传统资金紧张月，央行放了一些水缓解紧张情况，效果不错。让小泰帮您回顾下，精选基金在6月的市场中表现如何：", "source": "原创", "insertTime": 1499136973000, "id": "qqqqqqqqqqwwwwwwwwweee"}, {"status": 1, "columnName": "", "author": "小5", "publishTime": 1496888266000, "source": "原创", "intro": "5月的市场就是金牛座，涨的好的都跟钱相关：不是银行股就是保险股。让小泰帮您回顾下，精选基金在5月的市场中表现如何：", "insertTime": 1498204475000, "title": "精选基金复盘", "id": "abcdefghigklmnopq"}]}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="Failure">
+
+<td align="center">注册4</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center">post</td><td align="center">{'expReturn':'25000'}</td><td align="center">F</td><td align="center"><a href="javascript:change('page_details_4')"><img src="expand.png" alt="expand/collapse" id="page_details_4_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_4">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>注册4</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'25000'}</td><td align="center">1</td><td align="right-side">{"msg": "网络异常，请稍后再试", "code": 500}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">陈洁5</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center">{'num': '3'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_5')"><img src="expand.png" alt="expand/collapse" id="page_details_5_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_5">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>陈洁5</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'num': '3'}</td><td align="center">1</td><td align="right-side">{"code": 200, "data": [{"status": 1, "img": "", "author": "小5", "title": "精选基金复盘", "publishTime": 1499136932000, "columnName": "", "intro": "6月传统资金紧张月，央行放了一些水缓解紧张情况，效果不错。让小泰帮您回顾下，精选基金在6月的市场中表现如何：", "source": "原创", "insertTime": 1499136973000, "id": "qqqqqqqqqqwwwwwwwwweee"}, {"status": 1, "columnName": "", "author": "小5", "publishTime": 1496888266000, "source": "原创", "intro": "5月的市场就是金牛座，涨的好的都跟钱相关：不是银行股就是保险股。让小泰帮您回顾下，精选基金在5月的市场中表现如何：", "insertTime": 1498204475000, "title": "精选基金复盘", "id": "abcdefghigklmnopq"}]}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">注册6</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center">post</td><td align="center">{'expReturn':'8'|'investTerm':'6'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_6')"><img src="expand.png" alt="expand/collapse" id="page_details_6_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_6">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>注册6</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'8'|'investTerm':'6'}</td><td align="center">1</td><td align="right-side">{"msg": "ok", "code": 200, "data": {"fixPrompt2": "小泰通过大数据计算从6669支基金中筛选出符合您投资预期、<span style="color: #FFA20A;">亏损概率较低</span>的前5支基金。<div>这些基金盈利概率高，市场好时收益更高，市场调整时能<span style="color: #FFA20A;">最大程度的保住本金。</span></div>", "fixPrompt1": "小泰通过大数据计算从6669支基金中选出最适合半年投资，且符合您投资预期的基金共5支，其中<span style="color: #FFA20A;">泰达宏利养老混合B</span>亏损概率最低。", "flexiblePrompt2": "<span style="color: #FFA20A;">风险小，</span>门槛低，短期见收益，<span style="color: #FFA20A;">早买早收益。</span>", "funds": [{"fundId": "000508", "drawdown24m": 0.57, "drawdown6m": 0.4, "return2year": 11.14, "name": "泰达宏利养老混合B", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.39, "return3month": 4.88, "return6month": 5.99, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.32, "groupId": 0, "drawdown12m": 0.57}, {"fundId": "000507", "drawdown24m": 0.64, "drawdown6m": 0.4, "return2year": 12.52, "name": "泰达宏利养老混合A", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.68, "return3month": 4.96, "return6month": 6.35, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.31, "groupId": 0, "drawdown12m": 0.64}, {"fundId": "001141", "drawdown24m": 1.28, "drawdown6m": 0.72, "return2year": 11.59, "name": "泰达创盈A", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.15, "return3month": 4.24, "return6month": 6.16, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.63, "groupId": 0, "drawdown12m": 1.28}, {"fundId": "001597", "drawdown24m": 1.7, "drawdown6m": 0.76, "name": "招商丰融A", "riskLevel": "中等风险", "type": "混合型", "return1year": 11.01, "return3month": 6.27, "return6month": 9.42, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.76, "groupId": 0, "drawdown12m": 1.7}, {"fundId": "001598", "drawdown24m": 1.64, "drawdown6m": 0.69, "name": "招商丰融C", "riskLevel": "中等风险", "type": "混合型", "return1year": 9.22, "return3month": 6.22, "return6month": 9.22, "succRate": 95.9, "hs300Yield": 7.62, "drawdown3m": 0.69, "groupId": 0, "drawdown12m": 1.64}], "flexiblePrompt1": "基金直接交给专业基金经理来操盘，<span style="color: #FFA20A;">稳定且更省心。</span>"}}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">登录7</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center">{'num': '3'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_7')"><img src="expand.png" alt="expand/collapse" id="page_details_7_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_7">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>登录7</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'num': '3'}</td><td align="center">1</td><td align="right-side">{"code": 200, "data": [{"status": 1, "img": "", "author": "小5", "title": "精选基金复盘", "publishTime": 1499136932000, "columnName": "", "intro": "6月传统资金紧张月，央行放了一些水缓解紧张情况，效果不错。让小泰帮您回顾下，精选基金在6月的市场中表现如何：", "source": "原创", "insertTime": 1499136973000, "id": "qqqqqqqqqqwwwwwwwwweee"}, {"status": 1, "columnName": "", "author": "小5", "publishTime": 1496888266000, "source": "原创", "intro": "5月的市场就是金牛座，涨的好的都跟钱相关：不是银行股就是保险股。让小泰帮您回顾下，精选基金在5月的市场中表现如何：", "insertTime": 1498204475000, "title": "精选基金复盘", "id": "abcdefghigklmnopq"}]}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="Failure">
+
+<td align="center">lala啦啦啦8</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center"></td><td align="center">{'expReturn':'8'|'investTerm':'6'}</td><td align="center">F</td><td align="center"><a href="javascript:change('page_details_8')"><img src="expand.png" alt="expand/collapse" id="page_details_8_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_8">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>lala啦啦啦8</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'8'|'investTerm':'6'}</td><td align="center">1</td><td align="right-side">参数错误，请检查!!!</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="Failure">
+
+<td align="center">登录9</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center"></td><td align="center">F</td><td align="center"><a href="javascript:change('page_details_9')"><img src="expand.png" alt="expand/collapse" id="page_details_9_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_9">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>登录9</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td></td><td align="center">1</td><td align="right-side">参数错误，请检查!!!</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">12310</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center">post</td><td align="center">{'expReturn':'8'|'investTerm':'6'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_10')"><img src="expand.png" alt="expand/collapse" id="page_details_10_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_10">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>12310</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'8'|'investTerm':'6'}</td><td align="center">1</td><td align="right-side">{"msg": "ok", "code": 200, "data": {"fixPrompt2": "小泰通过大数据计算从6669支基金中筛选出符合您投资预期、<span style="color: #FFA20A;">亏损概率较低</span>的前5支基金。<div>这些基金盈利概率高，市场好时收益更高，市场调整时能<span style="color: #FFA20A;">最大程度的保住本金。</span></div>", "fixPrompt1": "小泰通过大数据计算从6669支基金中选出最适合半年投资，且符合您投资预期的基金共5支，其中<span style="color: #FFA20A;">泰达宏利养老混合B</span>亏损概率最低。", "flexiblePrompt2": "<span style="color: #FFA20A;">风险小，</span>门槛低，短期见收益，<span style="color: #FFA20A;">早买早收益。</span>", "funds": [{"fundId": "000508", "drawdown24m": 0.57, "drawdown6m": 0.4, "return2year": 11.14, "name": "泰达宏利养老混合B", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.39, "return3month": 4.88, "return6month": 5.99, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.32, "groupId": 0, "drawdown12m": 0.57}, {"fundId": "000507", "drawdown24m": 0.64, "drawdown6m": 0.4, "return2year": 12.52, "name": "泰达宏利养老混合A", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.68, "return3month": 4.96, "return6month": 6.35, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.31, "groupId": 0, "drawdown12m": 0.64}, {"fundId": "001141", "drawdown24m": 1.28, "drawdown6m": 0.72, "return2year": 11.59, "name": "泰达创盈A", "riskLevel": "中等风险", "type": "混合型", "return1year": 8.15, "return3month": 4.24, "return6month": 6.16, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.63, "groupId": 0, "drawdown12m": 1.28}, {"fundId": "001597", "drawdown24m": 1.7, "drawdown6m": 0.76, "name": "招商丰融A", "riskLevel": "中等风险", "type": "混合型", "return1year": 11.01, "return3month": 6.27, "return6month": 9.42, "succRate": 100.0, "hs300Yield": 7.62, "drawdown3m": 0.76, "groupId": 0, "drawdown12m": 1.7}, {"fundId": "001598", "drawdown24m": 1.64, "drawdown6m": 0.69, "name": "招商丰融C", "riskLevel": "中等风险", "type": "混合型", "return1year": 9.22, "return3month": 6.22, "return6month": 9.22, "succRate": 95.9, "hs300Yield": 7.62, "drawdown3m": 0.69, "groupId": 0, "drawdown12m": 1.64}], "flexiblePrompt1": "基金直接交给专业基金经理来操盘，<span style="color: #FFA20A;">稳定且更省心。</span>"}}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">登录12</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center">{'num': '3'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_11')"><img src="expand.png" alt="expand/collapse" id="page_details_11_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_11">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>登录12</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'num': '3'}</td><td align="center">1</td><td align="right-side">{"code": 200, "data": [{"status": 1, "img": "", "author": "小5", "title": "精选基金复盘", "publishTime": 1499136932000, "columnName": "", "intro": "6月传统资金紧张月，央行放了一些水缓解紧张情况，效果不错。让小泰帮您回顾下，精选基金在6月的市场中表现如何：", "source": "原创", "insertTime": 1499136973000, "id": "qqqqqqqqqqwwwwwwwwweee"}, {"status": 1, "columnName": "", "author": "小5", "publishTime": 1496888266000, "source": "原创", "intro": "5月的市场就是金牛座，涨的好的都跟钱相关：不是银行股就是保险股。让小泰帮您回顾下，精选基金在5月的市场中表现如何：", "insertTime": 1498204475000, "title": "精选基金复盘", "id": "abcdefghigklmnopq"}]}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="Failure">
+
+<td align="center">注册12313</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center">post</td><td align="center">{'expReturn':'8'}</td><td align="center">F</td><td align="center"><a href="javascript:change('page_details_12')"><img src="expand.png" alt="expand/collapse" id="page_details_12_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_12">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>注册12313</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'8'}</td><td align="center">1</td><td align="right-side">{"msg": "网络异常，请稍后再试", "code": 500}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">登录14</td><td align="center">http://120.132.11.35:8090/article/list/1</td><td align="center">get</td><td align="center">{'num': '3'}</td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_13')"><img src="expand.png" alt="expand/collapse" id="page_details_13_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_13">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>登录14</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'num': '3'}</td><td align="center">1</td><td align="right-side">{"code": 200, "data": [{"status": 1, "img": "", "author": "小5", "title": "精选基金复盘", "publishTime": 1499136932000, "columnName": "", "intro": "6月传统资金紧张月，央行放了一些水缓解紧张情况，效果不错。让小泰帮您回顾下，精选基金在6月的市场中表现如何：", "source": "原创", "insertTime": 1499136973000, "id": "qqqqqqqqqqwwwwwwwwweee"}, {"status": 1, "columnName": "", "author": "小5", "publishTime": 1496888266000, "source": "原创", "intro": "5月的市场就是金牛座，涨的好的都跟钱相关：不是银行股就是保险股。让小泰帮您回顾下，精选基金在5月的市场中表现如何：", "insertTime": 1498204475000, "title": "精选基金复盘", "id": "abcdefghigklmnopq"}]}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="Failure">
+
+<td align="center">注册15</td><td align="center">http://120.132.11.35:8090/cfa/personalTailor</td><td align="center">post</td><td align="center">{'expReturn':'8'}</td><td align="center">F</td><td align="center"><a href="javascript:change('page_details_14')"><img src="expand.png" alt="expand/collapse" id="page_details_14_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_14">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>注册15</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td>{'expReturn':'8'}</td><td align="center">1</td><td align="right-side">{"msg": "网络异常，请稍后再试", "code": 500}</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+<tr valign="top" class="">
+
+<td align="center">注册15</td><td align="center">http://baidu:</td><td align="center"></td><td align="center"></td><td align="center">T</td><td align="center"><a href="javascript:change('page_details_15')"><img src="expand.png" alt="expand/collapse" id="page_details_15_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_15">
+<td colspan="8" bgcolor="#FF0000">
+<div align="center">
+<b>注册15</b>
+<table bordercolor="#000000" bgcolor="#2674A6" border="0" cellpadding="1" cellspacing="1" width="95%">
+<tr>
+<th>发送数据</th><th>执行次数</th><th>返回数据</th>
+</tr>
+<tr>
+<td></td><td align="center">1</td><td align="right-side">参数错误，请检查!!!</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+</table>
+</div>
+</td>
+</tr>
+
+</table>
+</div>
+</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+</body>
+</html>
