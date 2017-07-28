@@ -19,17 +19,19 @@ windows下
 * 作者:bob_jie
 
 ##结构
+```javascript
   -data                 --ReadCSV.py（csv数据处理）
                         --reqite.csv
   -libs                 --LibRequests.py（接口请求处理）
   -Log（日志存放地址）  --log日志
   -report（html报告）   --report（html报告存放地址） ---20170727153229.html（html报告）
-  												 	                         ---collapse.png 
+                                                     ---collapse.png 
                                                      ---expand.png
-  						--CreateHtml.py（生产HTML）
-  						--HTML.html
+                        --CreateHtml.py（生产HTML）
+                        --HTML.html
 
   -Control.py （控制器）
+```
 
 ##启动
 windows启动方式
